@@ -1,51 +1,62 @@
-🗓️ Duración: 1 mes (marzo-junio 2025)
-🎯 Objetivo: Desarrollar una solución integral para la gestión de envíos de una empresa logística nacional, aplicando Clean Architecture y prácticas modernas de desarrollo backend y frontend desacoplado.
+# 📦 Sistema de Gestión de Envíos – Proyecto Fullstack (.NET 8 / C#)
 
-🧰 Tecnologías y herramientas
-Lenguaje: C#
+**⏳ Duración:** 1 mes (marzo – junio 2025)  
+**🎓 Proyecto académico | Programación 3 – Universidad ORT Uruguay**
 
-Frameworks: .NET 8, Entity Framework Core 8
+---
 
-Arquitectura: Clean Architecture, DDD
+## 🧾 Descripción
 
-Acceso a datos: LINQ
+Este proyecto simula un sistema real de gestión de envíos para una empresa de logística con cobertura nacional. Se implementó en dos etapas:
 
-Autenticación: JWT
+1. **Backend** con arquitectura limpia y lógica de negocio central.
+2. **API RESTful** para clientes, con autenticación JWT, consultada desde un cliente MVC desacoplado usando `HttpClient`.
 
-Documentación API: Swagger
+---
 
-Frontend: ASP.NET MVC (cliente separado que consume la API via HttpClient)
+## ⚙️ Tecnologías utilizadas
 
-Deploy: Microsoft Azure
+- **Lenguaje:** C#
+- **Framework:** .NET 8
+- **Base de datos:** Entity Framework Core 8.0
+- **Arquitectura:** Clean Architecture + Domain-Driven Design (DDD)
+- **Consultas:** LINQ (sintaxis de método)
+- **Autenticación:** JWT (Json Web Tokens)
+- **Frontend cliente:** ASP.NET MVC separado
+- **Consumo de API:** HttpClient
+- **Documentación de API:** Swagger
+- **Deploy:** Azure
 
-🔑 Funcionalidades implementadas
-Backend (Etapa 1)
-Login de empleados (roles: administrador, funcionario)
+---
 
-Gestión CRUD de usuarios y envíos
+## ✅ Funcionalidades implementadas
 
-Registro y seguimiento de envíos comunes y urgentes
+### 🔹 Etapa 1 – Backend (Gestión interna)
 
-Auditoría interna de acciones del sistema
+- Login de empleados (Administrador y Funcionario)
+- ABM de empleados con auditoría de acciones
+- Alta de envíos (urgentes y comunes)
+- Seguimiento de envíos por etapas
+- Cierre y cálculo de eficiencia de entregas urgentes
+- Consultas por número de tracking
 
-Cálculo automático de eficiencia en entregas urgentes
+### 🔹 Etapa 2 – Web API + Cliente MVC (rol Cliente)
 
-Web API + Cliente MVC (Etapa 2)
-Endpoints RESTful para clientes autenticados
+- Consulta pública de envío por tracking
+- Login y Logout con JWT
+- Cambio de contraseña
+- Listado histórico de envíos por cliente
+- Búsqueda por fechas y estados
+- Búsqueda por comentarios de seguimiento
+- Consumo exclusivo de la API desde MVC con `HttpClient`
 
-Consulta por número de tracking (pública)
+---
 
-Búsqueda de envíos por fecha, estado o comentario
+## 🧪 Testing y despliegue
 
-Cambio de contraseña
+- API documentada con **Swagger**
+- Testeo funcional desde **Postman**
+- Precarga de datos coherente y completa (mínimo 10 registros por entidad)
+- **Deploy realizado en Microsoft Azure**  
 
-Vista histórica de actividad del cliente
-
-Precarga de datos consistente para testing completo
-
-🚀 Deploy y testing
-API y aplicación publicadas en Azure
-
-Testing de endpoints con Postman y Swagger
-
-Scripts de inserción de datos y documentación de prompts utilizados con IA
+---
